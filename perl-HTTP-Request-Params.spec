@@ -20,7 +20,6 @@ BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl(Class::Accessor::Fast)
 BuildRequires:  perl(Email::Simple)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This software does all the dirty work of parsing HTTP Requests to find incoming
