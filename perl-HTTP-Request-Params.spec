@@ -1,7 +1,7 @@
 %define module	HTTP-Request-Params
 %define name	perl-%{module}
 %define version 1.01
-%define release %mkrel 5
+%define release %mkrel 7
 
 Name:		%{name}
 Version:	%{version}
