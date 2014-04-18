@@ -1,0 +1,27 @@
+From d2f2dd3cf76d4e33e8d75e5b2ee1de3a37565a9e Mon Sep 17 00:00:00 2001
+From: Slaven Rezic <slaven@rezic.de>
+Date: Wed, 3 Jul 2013 14:16:43 +0200
+Subject: [PATCH] added missing "use Email::MIME"
+
+It seems that with newer Email-MIME distribution there was
+some refactoring, so including Email::MIME::Modifier and/or
+Email::MIME::ContentType does not trigger loading of
+Email::MIME anymore.
+---
+ lib/HTTP/Request/Params.pm |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/lib/HTTP/Request/Params.pm b/lib/HTTP/Request/Params.pm
+index f5e6e5f..b7e2adb 100644
+--- a/lib/HTTP/Request/Params.pm
++++ b/lib/HTTP/Request/Params.pm
+@@ -22,6 +22,7 @@ use vars qw[$VERSION];
+ $VERSION = sprintf "%d.%02d", split m/\./, (qw$Revision: 1.1 $)[1];
+ 
+ use CGI;
++use Email::MIME;
+ use Email::MIME::Modifier;
+ use Email::MIME::ContentType qw[parse_content_type];
+ use HTTP::Request;
+-- 
+1.7.2.5
