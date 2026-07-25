@@ -1,15 +1,15 @@
 %define upstream_name	 HTTP-Request-Params
-%define upstream_version 1.01
+%define upstream_version 1.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Retrieve GET/POST Parameters from HTTP Requests
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTTP/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/HTTP-Request-Params
+Source0:	https://cpan.metacpan.org/authors/id/K/KI/KIZ/HTTP-Request-Params-%{upstream_version}.tar.gz
 Patch0:         perl-HTTP-Request-Params-1.01-fix-build.patch
 
 BuildRequires:	make
