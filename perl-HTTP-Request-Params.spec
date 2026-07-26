@@ -1,15 +1,13 @@
 %define upstream_name	 HTTP-Request-Params
-%define upstream_version 1.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.02
+Release:	2
 
 Summary:	Retrieve GET/POST Parameters from HTTP Requests
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/HTTP-Request-Params
-Source0:	https://cpan.metacpan.org/authors/id/K/KI/KIZ/HTTP-Request-Params-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KI/KIZ/HTTP-Request-Params-%{version}.tar.gz
 Patch0:         perl-HTTP-Request-Params-1.01-fix-build.patch
 
 BuildRequires:	make
@@ -26,7 +24,7 @@ This software does all the dirty work of parsing HTTP Requests to find incoming
 query parameters.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch0 -p1 -b .fix-build
 
 %build
